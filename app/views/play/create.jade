@@ -1,0 +1,11 @@
+extends ../layouts/home.jade
+
+block content
+	h1 You can start playing!
+	form(action="/play/42" method="post")
+		input(type="hidden" name="_method" value="put")
+		button(type="submit") Cheat
+	form(action="/play" method="post")
+		input(type="submit" value="Play")
+	p 
+		a(href="/loot/1") You have found a loot

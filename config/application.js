@@ -25,10 +25,16 @@ global.App={
 		}
 	},
 	routes: function(path){
-		return this.require("app/routes"+path)
+		return this.require("app/routes/"+path)
 	}
 
 }
+
+//Use the jade for views
+
+App.app.set("views", App.appPath("app/views"));
+App.app.set("view engine", "jade");
+App.app.set("view options", {pretty : env  === "development"});
 
 //Middleware
 App.app.use(express.bodyParser());

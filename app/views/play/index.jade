@@ -1,0 +1,6 @@
+extends ../layouts/home.jade
+
+block content
+	h1 Are you sure, #{user.username}
+	form(action="/play" method="post")
+		input(type="submit" value="Enter name to play")
