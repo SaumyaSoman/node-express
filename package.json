@@ -4,7 +4,8 @@
   "dependencies": {
     "express": "3.x",
     "jade": "1.11.x",
-    "mongoose": "~4.1.5"
+    "mongoose": "~4.1.5",
+    "mongoose-validate": "latest"
   },
   "engines": {
     "node": "0.10.x",
