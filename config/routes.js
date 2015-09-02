@@ -9,6 +9,7 @@ module.exports=function(app){
 	app.put('/play/:id' , playRoutes.update);
 
 	var lootRoutes= App.routes("lootRoutes");
+	app.get('/loot' , lootRoutes.index);
 	app.get('/loot/:id' , lootRoutes.getloot);
 
 }

@@ -1,4 +1,14 @@
 extends ../layouts/home.jade
 
 block content
-	h1 You got loot number #{lootid}
+  h1 Complete loot table
+    table
+      thead
+        tr
+          th Name
+          th Description
+      tbody
+        -each loot in loots
+         tr
+          td: a(href="/loot/#{loot.id}")= loot.name
+          td= loot.description

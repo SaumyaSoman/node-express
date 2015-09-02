@@ -24,6 +24,9 @@ global.App={
 		  console.log("Running App Version "+App.version+" in port "+App.port+" in "+App.env+" mode.");
 		}
 	},
+	model: function(path){
+		return this.require("app/models/"+path)
+	},
 	routes: function(path){
 		return this.require("app/routes/"+path)
 	}
@@ -45,3 +48,6 @@ App.app.use(App.app.router);
 App.app.use(express.static(App.appPath("images")));
 
 App.require("config/routes")(App.app);
+
+//Wire the database
+App.require("config/database")(process.env.DATABASE_URL||'mongodb://localhost/nodeslash');

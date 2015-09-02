@@ -1,12 +1,13 @@
 {
-	"name" : "routes-n-such-with-express",
-	"main" : "./server.js",
-	"dependencies" : {
-		"express" : "3.x",
-		"jade" : "1.11.x"
-	},
-	"engines" : {
-		"node" : "0.10.x",
-		"npm" : "1.2.x"
-	}
+  "name": "routes-n-such-with-express",
+  "main": "./server.js",
+  "dependencies": {
+    "express": "3.x",
+    "jade": "1.11.x",
+    "mongoose": "~4.1.5"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
 }
