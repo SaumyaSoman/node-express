@@ -1,3 +1,2 @@
-# node-express
+Following the node js tutorials provided by https://www.learnallthenodes.com/
 
-Following the online tutorials provided by https://www.learnallthenodes.com/
