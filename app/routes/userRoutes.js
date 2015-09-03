@@ -7,7 +7,7 @@ exports.new=function newUser(request,response){
 
 
 exports.create=function addUser(request,response){
-	var u=new User({email:request.body.email});
+	var u=new User({email:request.body.email, passwordHash:request.body.password});
 	u.save(function(err){
 		if(err) {
 			response.status(422).send("Error in saving to database", err.message);

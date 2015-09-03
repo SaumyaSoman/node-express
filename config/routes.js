@@ -16,4 +16,8 @@ module.exports=function(app){
 	app.get('/signup' , userRoutes.new);
 	app.post('/signup' , userRoutes.create);
 
+	var sessionRoutes= App.routes("sessionRoutes");
+	app.get('/signin' , sessionRoutes.new);
+	app.post('/signin' , sessionRoutes.create);
+
 }
