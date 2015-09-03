@@ -50,4 +50,4 @@ App.app.use(express.static(App.appPath("images")));
 App.require("config/routes")(App.app);
 
 //Wire the database
-App.require("config/database")(process.env.DATABASE_URL||'mongodb://localhost/nodeslash');
+App.require("config/database")(process.env.DATABASE_URL||'mongodb://localhost/nodeslash_'+App.env);
