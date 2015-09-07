@@ -39,13 +39,36 @@ App.app.set("views", App.appPath("app/views"));
 App.app.set("view engine", "jade");
 App.app.set("view options", {pretty : env  === "development"});
 
+//Configure less
+
+var lessMiddleware=require('less-middleware');
+var lessMiddlewareOptions={
+	dest : App.appPath('/public'),
+	relativeUrls : true,
+	force : App.env === 'development',
+	once : App.env !== 'development',
+	debug : App.env === 'development',
+	preprocess : {
+		path : function(pathname, req){
+			return pathname.replace('/stylesheets', '');
+		}
+	}
+};
+var lessParserOptions={
+	dumpLineNumbers : 'mediaquery'
+};
+var lessCompilerOptions={
+	compress : App.env !== 'development'
+};
+
+App.app.use(lessMiddleware(App.appPath('app/stylesheets'), lessMiddlewareOptions, lessParserOptions, lessCompilerOptions));
 //Middleware
 App.app.use(express.bodyParser());
 App.app.use(express.methodOverride());
 App.app.use(express.cookieParser());
 App.app.use(express.cookieSession({secret:"itsasecret", key:"session"}));
 App.app.use(App.app.router);
-App.app.use(express.static(App.appPath("images")));
+App.app.use(express.static(App.appPath("public")));
 
 App.require("config/routes")(App.app);
 

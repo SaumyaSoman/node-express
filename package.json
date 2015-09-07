@@ -6,8 +6,10 @@
     "jade": "1.11.x",
     "mongoose": "~4.1.5",
     "mongoose-validate": "latest",
-    "bcrypt": "~0.8.5", 
-    "async": "~1.4.2"
+    "bcrypt": "~0.8.5",
+    "async": "~1.4.2",
+    "less": "~2.5.1",
+    "less-middleware": "~2.0.1"
   },
   "engines": {
     "node": "0.10.x",
