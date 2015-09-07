@@ -6,12 +6,15 @@
     "jade": "1.11.x",
     "mongoose": "~4.1.5",
     "mongoose-validate": "latest",
-    "bcrypt": "~0.8.5",
-    "mocha": "~2.3.0",
+    "bcrypt": "~0.8.5", 
     "async": "~1.4.2"
   },
   "engines": {
     "node": "0.10.x",
     "npm": "1.2.x"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.0",
+    "supertest": "~1.1.0"
   }
 }
