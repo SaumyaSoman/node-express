@@ -1,4 +1,15 @@
-ul
-	li: a(href="/about") About
-	li: a(href="/signin") Sign In
-	li: a(href="/signup") Sign Up
+nav.navbar.navbar-inverse(role="navigation")
+	.navbar-header
+		button.navbar-toggle(type="button" , data-toggle="collapse" , data-target="#main_site_nav")
+			span.sr-only Toggle Navigation
+			span.icon-bar
+			span.icon-bar
+			span.icon-bar
+		a.navbar(href="/") 
+			| NodeSlash
+
+	.collapse.navbar-collapse#main_site_nav
+		ul.nav.navbar-nav
+			li: a(href="/about") About
+			li: a(href="/signin") Sign In
+			li: a(href="/signup") Sign Up
