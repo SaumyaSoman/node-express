@@ -15,3 +15,9 @@ exports.create=function addUser(request,response){
 		}
 	})
 };
+
+exports.destroy=function removeUser(request,response){
+	request.logout();
+	//request.flash('notice' , "You have successfully signed out.");
+	response.redirect('/');
+};
