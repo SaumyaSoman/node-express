@@ -79,6 +79,7 @@ App.app.use(express.cookieSession({secret:"itsasecret", key:"session"}));
 App.require('config/initializers/passport.js')();
 App.app.use(require('connect-flash')());
 App.app.use(App.middleware('setFlash'));
+App.app.use(App.middleware('attachAuthenticationStatus'));
 App.app.use(App.app.router);
 App.app.use(express.static(App.appPath("public")));
 

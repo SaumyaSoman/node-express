@@ -12,6 +12,8 @@ nav.navbar.navbar-inverse(role="navigation")
 	.collapse.navbar-collapse#main_site_nav
 		ul.nav.navbar-nav
 			li: a(href="/about") About
-			li: a(href="/signin") Sign In
-			li: a(href="/signup") Sign Up
-			li: a(href="/signout") Sign Out
+			- if(!isAuthenticated)
+				li: a(href="/signin") Sign In
+				li: a(href="/signup") Sign Up
+			- else
+				li: a(href="/signout") Sign Out
